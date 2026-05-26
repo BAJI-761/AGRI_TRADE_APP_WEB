@@ -337,8 +337,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Auto-scan Baji on load
-  setTimeout(() => executeBiometricScan("baji", false), 600);
+  // Auto-scan Baji on load (with scrolling)
+  setTimeout(() => executeBiometricScan("baji", true), 600);
 
   // ── 6. Hackathon Sandbox Categories ──
   const hackathonCards = document.querySelectorAll(".hackathon-category-card");
