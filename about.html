@@ -17,13 +17,18 @@
   <!-- ── Interactive Generative Background Canvas ── -->
   <canvas id="arch-scroll-canvas" class="arch-bg-canvas"></canvas>
 
-  <!-- ── Simple Static Navigation ── -->
+  <!-- ── Navigation with Mobile Hamburger ── -->
   <nav class="simple-nav">
     <a href="./index.html" class="simple-logo">
       <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" style="height:32px; width:32px; border-radius:8px;">
       <span>Agri<span style="color:#d4af37">Trade</span></span>
     </a>
-    <div class="simple-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="simple-links" id="nav-links">
       <a href="./index.html#features">Features</a>
       <a href="./index.html#how-it-works">How It Works</a>
       <a href="./index.html#simulator">Predict Crops</a>
@@ -36,6 +41,13 @@
       </a>
     </div>
   </nav>
+  <script>
+    document.getElementById('nav-hamburger').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+
 
   <!-- ── Page Header ── -->
   <header class="page-hero section-dark" style="position: relative; overflow: hidden; background: transparent;">
