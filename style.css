@@ -3883,6 +3883,21 @@ body::before {
   .hackathon-cards-grid, .interactive-roadmap-pipeline, .team-cards-grid {
     grid-template-columns: 1fr;
   }
+  .telemetry-gauges-grid, .terminal-telemetry {
+    grid-template-columns: 1fr;
+  }
+  .blueprint-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tracer-terminal-footer {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* Unique dark vignetting baselines for Screenshots and Team pages */
