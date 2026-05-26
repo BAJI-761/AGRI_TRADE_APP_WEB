@@ -22,13 +22,18 @@
     <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: -8px; opacity: 0.8;">PRECISELY ORGANIC &middot; INTELLIGENTLY CONNECTED</div>
   </div>
 
-  <!-- ── Simple Static Navigation ── -->
+  <!-- ── Navigation with Mobile Hamburger ── -->
   <nav class="simple-nav">
     <a href="./index.html" class="simple-logo">
       <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" style="height:32px; width:32px; border-radius:8px;">
       <span>Agri<span style="color:#d4af37">Trade</span></span>
     </a>
-    <div class="simple-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="simple-links" id="nav-links">
       <a href="#market-metrics">Market Sizing</a>
       <a href="#features">Features</a>
       <a href="#how-it-works">How It Works</a>
@@ -41,6 +46,13 @@
       </a>
     </div>
   </nav>
+  <script>
+    document.getElementById('nav-hamburger').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+
 
   <!-- ── Section 1: Hero Canvas Sequence ── -->
   <header class="hero" id="hero-section">

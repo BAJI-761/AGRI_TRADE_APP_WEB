@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentMember = null;
   let scanRunning = false;
 
-  function executeBiometricScan(memberKey) {
+  function executeBiometricScan(memberKey, autoScroll = false) {
     if (scanRunning) return;
     const member = TEAM_DATA[memberKey] || TEAM_DATA.baji;
     currentMember = memberKey;
@@ -297,6 +297,14 @@ document.addEventListener("DOMContentLoaded", () => {
     scanStatusBadge.innerText = "SCANNING…";
     scanStatusBadge.className = "terminal-badge warning";
 
+    // Smooth scroll down to the log console
+    if (autoScroll) {
+      const consoleElement = document.getElementById("biometrics-log-console");
+      if (consoleElement) {
+        consoleElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
     setTimeout(() => {
       if (sl) sl.classList.remove("active");
       scanStatusBadge.innerText = "AUTHENTICATED";
@@ -313,23 +321,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1800);
   }
 
+
   // Wire every "Scan Credentials" button
   document.querySelectorAll(".btn-scan-member").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      executeBiometricScan(btn.dataset.member);
+      executeBiometricScan(btn.dataset.member, true);
     });
   });
 
   // Wire card click itself too
   document.querySelectorAll(".team-member-card").forEach(card => {
     card.addEventListener("click", () => {
-      executeBiometricScan(card.dataset.member);
+      executeBiometricScan(card.dataset.member, true);
     });
   });
 
   // Auto-scan Baji on load
-  setTimeout(() => executeBiometricScan("baji"), 600);
+  setTimeout(() => executeBiometricScan("baji", false), 600);
 
   // ── 6. Hackathon Sandbox Categories ──
   const hackathonCards = document.querySelectorAll(".hackathon-category-card");
