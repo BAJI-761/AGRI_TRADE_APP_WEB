@@ -3860,75 +3860,523 @@ body::before {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Mobile responsive collapses */
+/* ═══════════════════════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE RESPONSIVE — Architecture, Platform UI, Team
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Tablet breakpoint (≤992px) ── */
 @media (max-width: 992px) {
-  .emulator-workspace-grid, .emulator-console-section, .about-hero-grid {
+
+  /* Global: tighter container padding */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Global: reduce hero padding when nav stacks */
+  .page-hero {
+    padding: 120px 0 50px;
+  }
+
+  /* Global: reduce large section spacing */
+  main.container {
+    padding-top: 32px !important;
+    padding-bottom: 80px !important;
+  }
+
+  /* ── Platform UI: Emulator 3-col → stacked ── */
+  .emulator-workspace-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .creator-spotlight-console {
-    flex-direction: column;
+
+  /* On tablet, show phone first, then menus below */
+  .emulator-center-column {
+    order: -1;
   }
-  .biometric-profile-card {
+
+  .emulator-menu-column {
     width: 100%;
   }
+
+  .emulator-menu-items {
+    max-height: 300px;
+  }
+
+  /* Console section: 2-col → stacked */
+  .emulator-console-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  /* ── About/Team: Hero grid → stacked ── */
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px !important;
+  }
+
+  /* Team cards: 3-col → 2-col */
   .team-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .terminal-telemetry {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-@media (max-width: 768px) {
-  .hackathon-cards-grid, .interactive-roadmap-pipeline, .team-cards-grid {
-    grid-template-columns: 1fr;
-  }
-  .telemetry-gauges-grid, .terminal-telemetry {
-    grid-template-columns: 1fr;
-  }
-  .blueprint-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .tracer-terminal-footer {
-    flex-wrap: wrap;
-    height: auto;
-    gap: 8px;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-  }
-  .tracer-console-sandbox {
-    grid-template-columns: 1fr !important;
-    padding: var(--space-md) !important;
-  }
-  .tracer-left-pane, .tracer-right-pane {
-    width: 100% !important;
-  }
-  .creator-spotlight-console {
-    flex-direction: column;
-    align-items: center;
-  }
+  /* Biometric profile card: fill width */
   .biometric-profile-card {
     width: 100% !important;
   }
-  .emulator-controls-row {
+
+  .creator-spotlight-console {
     flex-direction: column;
-    width: 100%;
   }
-  .blueprint-flow {
+
+  .terminal-telemetry {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ── Architecture: Tracer console sandbox ── */
+  .tracer-console-sandbox {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  /* Blueprint diagram image container */
+  .blueprint-diagram-container {
+    padding: 8px !important;
+    min-height: auto !important;
+  }
+
+  /* Team showcase tracer pane */
+  .tracer-right-pane {
+    min-height: 280px !important;
+  }
+}
+
+
+/* ── Mobile breakpoint (≤768px) ── */
+@media (max-width: 768px) {
+
+  /* Global: even tighter padding */
+  .container {
+    padding: 0 16px;
+  }
+
+  .page-hero {
+    padding: 110px 0 40px;
+  }
+
+  /* Reduce spacing between sections */
+  section {
+    margin-bottom: 48px !important;
+  }
+
+  /* ── Navigation: smaller font & tighter spacing ── */
+  .simple-nav {
+    padding: 8px 12px;
+  }
+
+  .simple-links {
+    gap: 14px;
+    margin-top: 10px;
+  }
+
+  .simple-links a {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .simple-links .nav-cta {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+
+  /* ── Architecture: Blueprint flow cards ── */
+  .blueprint-card {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+    min-width: unset;
+  }
+
+  .blueprint-card-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .blueprint-card-name {
+    font-size: 14px;
+  }
+
+  /* Details pane inside blueprint */
+  .details-tree {
+    font-size: 11px;
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .details-api-list li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .details-api-list code {
+    font-size: 11px;
+    word-break: break-all;
+  }
+
+  .details-spec-box {
+    font-size: 12px;
+  }
+
+  /* ── Architecture: Tracer console ── */
+  .tracer-console-sandbox {
+    padding: 16px;
+    gap: 20px;
+    border-radius: var(--radius-xl);
+  }
+
+  .tracer-controller-row {
+    flex-direction: column;
+    gap: 10px;
     align-items: stretch;
   }
-  .details-body {
-    grid-template-columns: 1fr !important;
+
+  .tracer-controller-row .btn-primary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
+
+  .tracer-status-badge {
+    text-align: center;
+  }
+
+  /* Tracer timeline steps */
+  .tracer-timeline-step {
+    padding: 12px;
+  }
+
+  .tracer-timeline-step .step-num {
+    font-size: 14px;
+    min-width: 32px;
+  }
+
+  .tracer-timeline-step .step-details h5 {
+    font-size: 13px;
+  }
+
+  .tracer-timeline-step .step-details p {
+    font-size: 12px;
+  }
+
+  /* Terminal footer: wrap gracefully */
+  .tracer-terminal-footer {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 6px;
+    padding: 8px 12px;
+    justify-content: center;
+    text-align: center;
+    font-size: 8px;
+  }
+
+  /* Terminal body: constrain height */
+  .tracer-terminal-body {
+    min-height: 200px !important;
+    max-height: 250px !important;
+  }
+
+  .terminal-code-block {
+    font-size: 10px;
+  }
+
+  /* Terminal header */
+  .tracer-terminal-header {
+    padding: 0 12px;
+  }
+
+  .terminal-tab {
+    font-size: 10px;
+  }
+
+  .terminal-badge {
+    font-size: 8px;
+    padding: 3px 8px;
+  }
+
+  /* ── Architecture: Security rules section ── */
+  .details-body,
+  #sandbox-panel-body {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Platform UI: Phone mockup smaller ── */
+  .phone-mockup-frame {
+    width: 260px;
+    height: 520px;
+    border-width: 8px;
+    border-radius: 30px;
+  }
+
+  .phone-shadow {
+    width: 220px;
+  }
+
+  .emulator-controls-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Telemetry gauges: single col */
+  .telemetry-gauges-grid, .terminal-telemetry {
+    grid-template-columns: 1fr;
+  }
+
+  .emulator-telemetry-panel {
+    padding: 16px;
+  }
+
+  .telemetry-description {
+    font-size: 12px;
+  }
+
+  /* ── About/Team: Cards ── */
+  .hackathon-cards-grid,
+  .interactive-roadmap-pipeline,
+  .team-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team member cards */
+  .biometric-profile-card {
+    padding: 24px 16px;
+  }
+
+  .profile-avatar-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .creator-name {
+    font-size: 17px !important;
+  }
+
+  .creator-role {
+    font-size: 10px !important;
+  }
+
+  .creator-biometrics-strip {
+    font-size: 8px;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  /* Hackathon category cards */
+  .hackathon-category-card {
+    padding: 16px 20px;
+    min-height: 140px;
+  }
+
+  .category-title {
+    font-size: 16px;
+  }
+
+  .category-desc {
+    font-size: 12px;
+  }
+
+  /* Roadmap milestones */
+  .roadmap-milestone {
+    padding: 16px 20px;
+  }
+
+  .milestone-title {
+    font-size: 13px;
+  }
+
+  .milestone-short {
+    font-size: 12px;
+  }
+
+  /* Blueprint details pane */
+  .blueprint-details-pane {
+    padding: 16px;
+  }
+
+  .details-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .details-title {
+    font-size: 16px;
+  }
+
+  /* ── Footer: 4-col → 1-col ── */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* Section headers: reduce text sizes */
+  .section-overline {
+    font-size: 10px;
+  }
+
+  .text-display {
+    word-break: break-word;
+  }
+
+  .section-subtitle,
+  .section-header .text-secondary {
+    font-size: 14px;
+  }
+
+  /* Blueprint diagram image */
+  .blueprint-diagram-container img {
+    border-radius: 8px;
+  }
+
+  /* Visualizer screens */
+  .tracer-visualizer-container {
+    min-height: 180px;
+  }
+
+  #canvas-soundwave {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* ── Small phone breakpoint (≤480px) ── */
+@media (max-width: 480px) {
+
+  /* Even tighter container */
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 12px;
   }
-  header.page-hero {
-    padding: 40px 15px !important;
+
+  .page-hero {
+    padding: 100px 0 30px;
+  }
+
+  /* Phone mockup: scale for tiny screens */
+  .phone-mockup-frame {
+    width: 230px;
+    height: 460px;
+    border-width: 6px;
+    border-radius: 26px;
+  }
+
+  .phone-shadow {
+    width: 190px;
+  }
+
+  .phone-notch {
+    width: 90px;
+    height: 16px;
+  }
+
+  /* Profile avatars smaller */
+  .profile-avatar-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .creator-name {
+    font-size: 15px !important;
+  }
+
+  /* Blueprint cards: tighter */
+  .blueprint-card {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .blueprint-card-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .blueprint-card-name {
+    font-size: 13px;
+  }
+
+  .blueprint-card-tech {
+    font-size: 9px;
+  }
+
+  /* Tracer console: minimal padding */
+  .tracer-console-sandbox {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  /* Button text */
+  .btn-primary {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .btn-scan-member {
+    font-size: 10px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 0 16px;
+  }
+
+  .footer-brand-text {
+    font-size: 13px;
+  }
+
+  .footer-heading {
+    font-size: 14px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+
+  /* Emulator menu items: tighter */
+  .emulator-menu-item {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .step-meta h4 {
+    font-size: 11px;
+  }
+
+  .step-meta span {
+    font-size: 8px;
+  }
+
+  .column-title {
+    font-size: 13px;
+  }
+
+  .column-desc {
+    font-size: 11px;
+  }
+
+  /* Security rules list */
+  .details-body ul li,
+  section ul li {
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
 
