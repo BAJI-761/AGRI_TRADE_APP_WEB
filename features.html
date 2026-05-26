@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Interactive App Emulator Showcase — AgriTrade</title>
+  <meta name="description" content="Simulate user workflows, mobile crop diagnostics, bidding ledgers, and secure escrows directly inside a high-fidelity interactive smartphone device simulator.">
+  <meta name="keywords" content="App Showcase, Flutter simulator, interactive mockup, crop analysis user flow, mobile B2B mandi">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="./style_v75.css">
+</head>
+<body class="features-page-body">
+
+  <!-- ── Interactive Generative Background Canvas ── -->
+  <canvas id="arch-scroll-canvas" class="arch-bg-canvas"></canvas>
+
+  <!-- ── Simple Static Navigation ── -->
+  <nav class="simple-nav">
+    <a href="./index.html" class="simple-logo">
+      <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" style="height:32px; width:32px; border-radius:8px;">
+      <span>Agri<span style="color:#d4af37">Trade</span></span>
+    </a>
+    <div class="simple-links">
+      <a href="./index.html#features">Features</a>
+      <a href="./index.html#how-it-works">How It Works</a>
+      <a href="./index.html#simulator">Predict Crops</a>
+      <a href="./architecture.html">Architecture</a>
+      <a href="#" style="color: #d4af37;">Platform UI</a>
+      <a href="./about.html">Team</a>
+      <a href="./assets/agri_trade_app.apk" class="nav-cta" download>
+        <span>Download APK</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <header class="page-hero section-dark" style="position: relative; overflow: hidden; background: transparent;">
+    <!-- Grid overlay effect -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(74,222,128,0.03) 1px, transparent 1px); background-size: 24px 24px; pointer-events: none;"></div>
+    <div class="container reveal" style="position: relative; z-index: 2;">
+      <div class="overline" style="color: var(--primary-glow);">VIRTUAL APP CONSOLE</div>
+      <h1 class="text-display" style="font-size: var(--font-h1); color: white; margin-top: 10px;">Interactive Showcase</h1>
+      <p class="section-subtitle" style="margin: var(--space-sm) auto 0; color: var(--text-on-dark-muted); max-width: 700px;">
+        Simulate real mobile sessions, agronomy diagnostics, active B2B auction bidding, and direct ledger settlements inside a high-fidelity virtual device environment.
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: var(--space-md); padding-bottom: var(--space-3xl);">
+
+    <!-- Interactive Emulator Workspace -->
+    <div class="emulator-workspace-grid reveal">
+      
+      <!-- COLUMN 1: LEFT MENU (FARMER FLOW) -->
+      <div class="emulator-menu-column">
+        <h3 class="column-title text-green">🌾 Farmer Workflow</h3>
+        <p class="column-desc">Onboarding and soil diagnostic steps taken to upload crop yields.</p>
+        
+        <div class="emulator-menu-items">
+          <div class="emulator-menu-item active" data-index="0">
+            <span class="step-badge">01</span>
+            <div class="step-meta">
+              <h4>Splash App Entry</h4>
+              <span>Intro &amp; Lottie entry point</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="1">
+            <span class="step-badge">02</span>
+            <div class="step-meta">
+              <h4>Language Selection</h4>
+              <span>Regional Telugu toggle</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="2">
+            <span class="step-badge">03</span>
+            <div class="step-meta">
+              <h4>Twilio Phone OTP</h4>
+              <span>Secure authentication input</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="3">
+            <span class="step-badge">04</span>
+            <div class="step-meta">
+              <h4>OTP Code Challenge</h4>
+              <span>Secure Firebase rule matching</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="4">
+            <span class="step-badge">05</span>
+            <div class="step-meta">
+              <h4>User Profile Registration</h4>
+              <span>Farmer/Wholesaler setup</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="5">
+            <span class="step-badge">06</span>
+            <div class="step-meta">
+              <h4>Farmer Dashboard Home</h4>
+              <span>Mandi indices &amp; updates</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="6">
+            <span class="step-badge">07</span>
+            <div class="step-meta">
+              <h4>Soil Diagnostics Panel</h4>
+              <span>Chemical vector telemetry</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="7">
+            <span class="step-badge">08</span>
+            <div class="step-meta">
+              <h4>AI Crop Matches List</h4>
+              <span>Soil matching matrix</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="8">
+            <span class="step-badge">09</span>
+            <div class="step-meta">
+              <h4>Diagnostics &amp; Yields</h4>
+              <span>Estimated harvest details</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: CENTER DEVICE SIMULATOR -->
+      <div class="emulator-center-column">
+        
+        <!-- Interactive Controls Bar -->
+        <div class="emulator-controls-row">
+          <button class="btn-primary" id="btn-toggle-tour" style="border: none; font-size: 13px; padding: 10px 18px; box-shadow: var(--shadow-glow);">
+            <span id="tour-icon">▶</span> <span id="tour-text">Auto-Play Tour Sequence</span>
+          </button>
+          <div class="tour-timer-holder" id="tour-timer-box" style="display: none;">
+            <div class="tour-timer-arc"></div>
+            <span id="tour-timer-text">3.0s</span>
+          </div>
+        </div>
+
+        <!-- 3D Smartphone Frame Mockup -->
+        <div class="phone-mockup-frame">
+          <div class="phone-notch">
+            <div class="phone-camera"></div>
+            <div class="phone-speaker"></div>
+          </div>
+          <div class="phone-side-buttons">
+            <div class="btn-vol-up"></div>
+            <div class="btn-vol-down"></div>
+            <div class="btn-power"></div>
+          </div>
+          <div class="phone-top-bar">
+            <span class="phone-clock" id="sim-clock">10:42 AM</span>
+            <div class="phone-status-icons">
+              <span>📶</span>
+              <span id="sim-signal-strength">LTE</span>
+              <span>🔋 98%</span>
+            </div>
+          </div>
+          <div class="phone-screen-container">
+            <img id="phone-screen-image" src="./assets/screenshots/screen_01.jpg" alt="AgriTrade Live Screen Simulator">
+            
+            <!-- Flashing overlay indicators -->
+            <div class="sim-screen-overlay" id="sim-transition-flash"></div>
+          </div>
+          <div class="phone-home-indicator"></div>
+        </div>
+        
+        <div class="phone-shadow"></div>
+      </div>
+
+      <!-- COLUMN 3: RIGHT MENU (B2B TRADE & OUTCOMES) -->
+      <div class="emulator-menu-column">
+        <h3 class="column-title text-gold">🤝 Wholesaler &amp; Escrow</h3>
+        <p class="column-desc">Auctions, digital UPI escrows, and logistics dispatch paths.</p>
+        
+        <div class="emulator-menu-items">
+          <div class="emulator-menu-item" data-index="9">
+            <span class="step-badge">10</span>
+            <div class="step-meta">
+              <h4>Upload Crop Listing</h4>
+              <span>Form payload submission</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="10">
+            <span class="step-badge">11</span>
+            <div class="step-meta">
+              <h4>Mandi Bids Ledger</h4>
+              <span>Wholesaler bidding desk</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="11">
+            <span class="step-badge">12</span>
+            <div class="step-meta">
+              <h4>STT Voice Commands</h4>
+              <span>Regional speech parser</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="12">
+            <span class="step-badge">13</span>
+            <div class="step-meta">
+              <h4>Retailer Dashboard Overview</h4>
+              <span>Bulk grain scroller index</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="13">
+            <span class="step-badge">14</span>
+            <div class="step-meta">
+              <h4>Wholesaler Orders Stream</h4>
+              <span>Contract acceptances</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="14">
+            <span class="step-badge">15</span>
+            <div class="step-meta">
+              <h4>Route Dispatch Maps</h4>
+              <span>Fleet dispatch and tracking</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="15">
+            <span class="step-badge">16</span>
+            <div class="step-meta">
+              <h4>Escrow Vault Ledger</h4>
+              <span>Razorpay lock statements</span>
+            </div>
+          </div>
+          
+          <div class="emulator-menu-item" data-index="16">
+            <span class="step-badge">17</span>
+            <div class="step-meta">
+              <h4>UPI Settlement Release</h4>
+              <span>Secure QR payout ticket</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Live Telemetry & Process Terminal Logger -->
+    <div class="emulator-console-section reveal">
+      
+      <!-- Left Terminal: macOS Style Code printout -->
+      <div class="tracer-right-pane" style="margin: 0; min-height: 280px;">
+        <div class="tracer-terminal-header">
+          <div class="terminal-dots">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-tab" id="console-tab-name">system_diagnostics.log</div>
+          <div class="terminal-badge">STABLE</div>
+        </div>
+        
+        <div class="tracer-terminal-body" style="min-height: 200px; max-height: 200px;">
+          <pre id="emulator-terminal-text" class="terminal-code-block"><span class="code-comment">// agritrade-client$ bootstrap_emulator.sh --device=pixel_8
+// Connection to virtual device established. Sync: STABLE.</span></pre>
+        </div>
+        
+        <div class="tracer-terminal-footer">
+          <div>SCREEN KEY: <span class="tele-val text-green" id="tele-screen-key">screen_01.jpg</span></div>
+          <div>DATABASE CONNECT: <span class="tele-val" id="tele-db-status">LOCAL_CACHE</span></div>
+          <div>PROCESS STACK: <span class="tele-val text-gold" id="tele-process">INITIALIZED</span></div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Telemetry Gauges -->
+      <div class="emulator-telemetry-panel">
+        <h4 class="text-gold" style="font-family: var(--font-mono); font-size: 15px; margin-bottom: var(--space-xs); border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 8px;">📊 Process Telemetry Metrics</h4>
+        
+        <div class="telemetry-gauges-grid">
+          
+          <div class="telemetry-gauge-card">
+            <span class="gauge-label">VIRTUAL CPU LOAD</span>
+            <div class="gauge-bar-container">
+              <div class="gauge-bar-fill emerald" id="gauge-cpu" style="width: 14%;"></div>
+            </div>
+            <span class="gauge-val" id="gauge-cpu-val">14%</span>
+          </div>
+
+          <div class="telemetry-gauge-card">
+            <span class="gauge-label">VIRTUAL HEAP USED</span>
+            <div class="gauge-bar-container">
+              <div class="gauge-bar-fill emerald" id="gauge-mem" style="width: 32%;"></div>
+            </div>
+            <span class="gauge-val" id="gauge-mem-val">32.4 MB</span>
+          </div>
+
+          <div class="telemetry-gauge-card">
+            <span class="gauge-label">API REQUEST PING</span>
+            <div class="gauge-bar-container">
+              <div class="gauge-bar-fill gold" id="gauge-ping" style="width: 0%;"></div>
+            </div>
+            <span class="gauge-val" id="gauge-ping-val">0ms (LOCAL)</span>
+          </div>
+
+          <div class="telemetry-gauge-card">
+            <span class="gauge-label">SECURITY ENVELOPE</span>
+            <span class="security-status-text" id="gauge-sec">AES_256_LOCAL</span>
+          </div>
+
+        </div>
+
+        <div class="telemetry-description" id="tele-description">
+          Welcome to the AgriTrade Mobile Session Showcase. Tap any menu tab to start auditing the process.
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" style="background: transparent; border-top: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="nav-logo">
+            <span class="nav-logo-text" style="color: white;">Agri<span class="text-gold">Trade</span></span>
+          </a>
+          <p class="footer-brand-text">AI-driven agricultural trade solutions empowering regional farming cooperatives with direct urban B2B markets.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <a href="./index.html#features" class="footer-link">Features</a>
+          <a href="./index.html#how-it-works" class="footer-link">How It Works</a>
+          <a href="./index.html#simulator" class="footer-link">Crop Prediction</a>
+          <a href="./assets/agri_trade_app.apk" class="footer-link" download>Download APK</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Technical Deep Dive</h4>
+          <a href="./architecture.html" class="footer-link">API Flow Maps</a>
+          <a href="./architecture.html#database" class="footer-link">Firestore Schema</a>
+          <a href="./architecture.html#voice" class="footer-link">Gemini Voice Pipeline</a>
+          <a href="https://github.com/BAJI-761/AGRI_TRADE_APP_hackthon" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hackathon</h4>
+          <p class="footer-brand-text" style="margin-top: 0; font-size: 14px;">ByteHearts Ranovex 2026<br><strong>Category</strong>: Best Social Impact & Rural Innovation</p>
+          <a href="./about.html" class="footer-link" style="color: var(--accent-gold); font-weight: bold; margin-top: 8px;">About the Creators &rarr;</a>
+        </div>
+      </div>
+      <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.04);">
+        <div>&copy; 2026 AgriTrade. Built with 💚 for Indian Agriculture.</div>
+        <div>ByteHearts Developer Circle &bull; Ranovex 2026 Submission</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app_v75.js"></script>
+  <script src="./features.js?v=2.3"></script>
+</body>
+</html>

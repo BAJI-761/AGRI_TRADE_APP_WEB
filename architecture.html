@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Technical Architecture Control Center — AgriTrade</title>
+  <meta name="description" content="Explore the interactive technical blueprints, database schemas, voice processing pipelines, and system flow traces of the AgriTrade B2B farm platform.">
+  <meta name="keywords" content="architecture, Flutter engineering, Firebase security, Gemini AI voice, Razorpay escrow, rural fintech">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="./style_v75.css">
+</head>
+<body class="arch-page-body">
+
+  <!-- ── Interactive Generative Background Canvas ── -->
+  <canvas id="arch-scroll-canvas" class="arch-bg-canvas"></canvas>
+
+  <!-- ── Simple Static Navigation ── -->
+  <nav class="simple-nav">
+    <a href="./index.html" class="simple-logo">
+      <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" style="height:32px; width:32px; border-radius:8px;">
+      <span>Agri<span style="color:#d4af37">Trade</span></span>
+    </a>
+    <div class="simple-links">
+      <a href="./index.html#features">Features</a>
+      <a href="./index.html#how-it-works">How It Works</a>
+      <a href="./index.html#simulator">Predict Crops</a>
+      <a href="#" style="color: #d4af37;">Architecture</a>
+      <a href="./features.html">Platform UI</a>
+      <a href="./about.html">Team</a>
+      <a href="./assets/agri_trade_app.apk" class="nav-cta" download>
+        <span>Download APK</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── Blueprint Page Header ── -->
+  <header class="page-hero section-dark" style="position: relative; overflow: hidden; background: transparent;">
+    <!-- Grid overlay effect -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(74,222,128,0.03) 1px, transparent 1px); background-size: 24px 24px; pointer-events: none;"></div>
+    <div class="container reveal" style="position: relative; z-index: 2;">
+      <div class="overline" style="color: var(--primary-glow);">AGRITRADE BLUEPRINTS</div>
+      <h1 class="text-display" style="font-size: var(--font-h1); color: white; margin-top: 10px;">Technical Architecture</h1>
+      <p class="section-subtitle" style="margin: var(--space-sm) auto 0; color: var(--text-on-dark-muted); max-width: 700px;">
+        An interactive, high-performance deep-dive into the engineering layers, offline storage arrays, voice intent decoders, and secure payment pipelines behind AgriTrade.
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
+
+    <!-- ── SECTION 1: INTERACTIVE SYSTEM BLUEPRINT DIAGRAM ── -->
+    <section style="margin-bottom: var(--space-3xl);">
+      <div class="section-header reveal">
+        <div class="section-overline" style="color: var(--primary-glow);">CORE TOPOLOGY</div>
+        <h2 class="text-display text-green" style="font-size: var(--font-h2); margin-bottom: var(--space-sm);">System Module Blueprint</h2>
+        <p class="text-secondary" style="max-width: 650px; color: var(--text-on-dark-muted);">Click on any architectural layer below to inspect its directory maps, active APIs, and direct endpoint routes.</p>
+      </div>
+
+      <!-- SVG Wired Module Map -->
+      <div class="blueprint-diagram-container reveal">
+        <!-- SVG conduits backing -->
+        <svg class="conduit-svg-lines" viewBox="0 0 1000 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="conduit-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#10B981" stop-opacity="0.1"></stop>
+              <stop offset="50%" stop-color="#10B981" stop-opacity="0.6"></stop>
+              <stop offset="100%" stop-color="#10B981" stop-opacity="0.1"></stop>
+            </linearGradient>
+          </defs>
+          <path d="M 120 60 L 880 60" stroke="url(#conduit-grad)" stroke-width="3" stroke-dasharray="10 8" class="conduit-path-laser"></path>
+        </svg>
+
+        <div class="blueprint-flow">
+          <!-- Card 1: Flutter Client -->
+          <div class="blueprint-card active" data-module="client">
+            <div class="blueprint-card-badge">MODULE 01</div>
+            <div class="blueprint-card-icon">📱</div>
+            <h4 class="blueprint-card-name">Flutter Client</h4>
+            <span class="blueprint-card-tech">Dart &amp; SQLite Cache</span>
+          </div>
+
+          <!-- Card 2: Twilio Gateway -->
+          <div class="blueprint-card" data-module="gateway">
+            <div class="blueprint-card-badge">MODULE 02</div>
+            <div class="blueprint-card-icon">🔒</div>
+            <h4 class="blueprint-card-name">Twilio Gateway</h4>
+            <span class="blueprint-card-tech">SMS Session Auth</span>
+          </div>
+
+          <!-- Card 3: Gemini AI Core -->
+          <div class="blueprint-card" data-module="ai">
+            <div class="blueprint-card-badge">MODULE 03</div>
+            <div class="blueprint-card-icon">🤖</div>
+            <h4 class="blueprint-card-name">Gemini AI Hub</h4>
+            <span class="blueprint-card-tech">Voice Intent NLU</span>
+          </div>
+
+          <!-- Card 4: Cloud Firestore -->
+          <div class="blueprint-card" data-module="database">
+            <div class="blueprint-card-badge">MODULE 04</div>
+            <div class="blueprint-card-icon">🔥</div>
+            <h4 class="blueprint-card-name">Cloud Firestore</h4>
+            <span class="blueprint-card-tech">Real-Time NoSQL</span>
+          </div>
+
+          <!-- Card 5: Razorpay Escrow -->
+          <div class="blueprint-card" data-module="escrow">
+            <div class="blueprint-card-badge">MODULE 05</div>
+            <div class="blueprint-card-icon">💳</div>
+            <h4 class="blueprint-card-name">Razorpay Escrow</h4>
+            <span class="blueprint-card-tech">Secure Settlements</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Blueprint Details Card -->
+      <div class="blueprint-details-pane reveal" id="module-details-box">
+        <div class="details-header">
+          <span class="details-module-num" id="det-module-num">MODULE 01</span>
+          <h3 class="details-title" id="det-module-title">Flutter Client Application</h3>
+        </div>
+        <div class="details-body">
+          <div class="details-col">
+            <h4 class="text-gold">ðŸ“‚ Directory Architecture</h4>
+            <pre class="details-tree" id="det-module-tree">
+lib/
+â”œ── screens/
+â”‚   â”œ── farmer/
+â”‚   â”‚   â”œ── crop_upload.dart
+â”‚   â”‚   â””── soil_diagnostics.dart
+â”‚   â””── retailer/
+â”‚       â”œ── bids_ledger.dart
+â”‚       â””── orders_dashboard.dart
+â”œ── services/
+â”‚   â”œ── voice_service.dart
+â”‚   â””── offline_service.dart
+â””── main.dart</pre>
+          </div>
+          <div class="details-col">
+            <h4 class="text-gold">🔧 Core APIs &amp; Interfaces</h4>
+            <ul class="details-api-list" id="det-module-apis">
+              <li><code>SmartCropEngine.predict()</code>: Client-side diagnostic logic weighing soil vectors (Black, Clay, Red) and water levels to calculate exact crop suitability matrices.</li>
+              <li><code>SQLiteOfflineQueue.push()</code>: Buffers crop upload operations and local B2B transaction records into localized database buffers during active connectivity dropouts.</li>
+            </ul>
+            <div class="details-spec-box" id="det-module-benefit">
+              <strong>Layer Benefit:</strong> Zero lag caching and localized processing allows farmers to operate securely inside deep rural terrain where mobile networks are unstable.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: LIVE TRANSACTION FLOW PIPELINE TRACER ── -->
+    <section class="reveal" style="margin-bottom: var(--space-3xl);">
+      <div class="section-header text-center">
+        <div class="section-overline" style="color: var(--primary-glow);">LIVE DIAGNOSTIC PIPELINE</div>
+        <h2 class="text-display text-green" style="font-size: var(--font-h2); margin-bottom: var(--space-sm);">B2B Trade Flow Pipeline Tracer</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto 0; max-width: 750px; color: var(--text-on-dark-muted);">
+          Trigger a live diagnostic test sequence and watch a simulated vernacular-speech trade transition through local databases, Twilio firewalls, Gemini parsers, and financial escrow settlements.
+        </p>
+      </div>
+
+      <div class="tracer-console-sandbox">
+        
+        <!-- Left: Steps & Canvas Visualizer -->
+        <div class="tracer-left-pane">
+          <div class="tracer-controller-row">
+            <button class="btn-primary" id="btn-trigger-flow" style="box-shadow: var(--shadow-glow); border: none;">
+              <span>⚡ Initiate Flow Test Pipeline</span>
+            </button>
+            <span class="tracer-status-badge" id="tracer-status">IDLE</span>
+          </div>
+
+          <!-- Dynamic Visualizer Screen -->
+          <div class="tracer-visualizer-container">
+            <!-- Idle Visual Screen -->
+            <div class="visualizer-screen active" id="viz-idle">
+              <div class="viz-icon-glowing">📡</div>
+              <div class="viz-text" style="color: var(--text-on-dark-muted);">Pipeline Diagnostic Idle. Click the button above to run real-time transaction path tracing.</div>
+            </div>
+
+            <!-- Stage 1 Visual Screen: Audio Waveform Canvas -->
+            <div class="visualizer-screen" id="viz-speech">
+              <canvas id="canvas-soundwave" width="450" height="150"></canvas>
+              <div class="viz-caption">Captured spoken vernacular Telugu audio command input stream.</div>
+            </div>
+
+            <!-- Stage 2 Visual Screen: Twilio OTP secure gate -->
+            <div class="visualizer-screen" id="viz-auth">
+              <div class="viz-auth-gate">
+                <span class="auth-scanner-line"></span>
+                <div class="auth-key-circle">🔑</div>
+              </div>
+              <div class="viz-caption">Twilio Verification: Processing secure transaction signature key.</div>
+            </div>
+
+            <!-- Stage 3 Visual Screen: AI Core JSON extractor -->
+            <div class="visualizer-screen" id="viz-ai">
+              <div class="viz-ai-mesh">
+                <div class="ai-node">🤖</div>
+                <div class="ai-laser-flow"></div>
+                <div class="ai-json-code">JSON</div>
+              </div>
+              <div class="viz-caption">Gemini NLU Core: Translating spoken audio input to structured JSON schema.</div>
+            </div>
+
+            <!-- Stage 4 Visual Screen: SQLite Local Cache -->
+            <div class="visualizer-screen" id="viz-cache">
+              <div class="viz-offline-disk">
+                <div class="disk-platter">💾</div>
+                <div class="connection-status-badge offline" id="viz-conn-badge">PING: 0ms (OFFLINE)</div>
+              </div>
+              <div class="viz-caption">SQLite Buffer Cache: Queued listing payload locally. No cellular signal found.</div>
+            </div>
+
+            <!-- Stage 5 Visual Screen: Cloud Sync Pipe -->
+            <div class="visualizer-screen" id="viz-cloud">
+              <div class="viz-cloud-pulse">
+                <div class="cloud-icon">☁️</div>
+                <div class="cloud-arrow-sync">&uarr;</div>
+              </div>
+              <div class="viz-caption">Firestore Cluster: Carrier restored. Syncing offline buffers to cloud records.</div>
+            </div>
+
+            <!-- Stage 6 Visual Screen: Escrow locks -->
+            <div class="visualizer-screen" id="viz-escrow">
+              <div class="viz-lock-icon" id="escrow-lock-anim">🔒</div>
+              <div class="viz-caption">Razorpay digital escrow: B2B transaction value locked. Settlement complete.</div>
+            </div>
+          </div>
+
+          <!-- Vertical/Sequential Timeline Steps -->
+          <div class="tracer-timeline">
+            <div class="tracer-timeline-step" data-step="1">
+              <div class="step-num">01</div>
+              <div class="step-details">
+                <h5>Vernacular Audio Record</h5>
+                <p>Spoken village Telugu: "Recommend Rabi crop for loamy soil and post 400kg yield listing."</p>
+              </div>
+            </div>
+
+            <div class="tracer-timeline-step" data-step="2">
+              <div class="step-num">02</div>
+              <div class="step-details">
+                <h5>Twilio OTP Signature check</h5>
+                <p>Secure phone transaction validation matching Firebase Auth verified claims.</p>
+              </div>
+            </div>
+
+            <div class="tracer-timeline-step" data-step="3">
+              <div class="step-num">03</div>
+              <div class="step-details">
+                <h5>Gemini NLU Parameter Capture</h5>
+                <p>Large Language Model translates acoustic speech strings into formatted JSON arrays.</p>
+              </div>
+            </div>
+
+            <div class="tracer-timeline-step" data-step="4">
+              <div class="step-num">04</div>
+              <div class="step-details">
+                <h5>SQLite Edge database cache</h5>
+                <p>Transaction is stored locally when carrier signals drop below standard operational boundaries.</p>
+              </div>
+            </div>
+
+            <div class="tracer-timeline-step" data-step="5">
+              <div class="step-num">05</div>
+              <div class="step-details">
+                <h5>Firestore Cloud Database Sync</h5>
+                <p>Once network connectivity is recovered, local buffers are pushed and committed.</p>
+              </div>
+            </div>
+
+            <div class="tracer-timeline-step" data-step="6">
+              <div class="step-num">06</div>
+              <div class="step-details">
+                <h5>Razorpay Escrow Ledger Lock</h5>
+                <p>Purchase funds are held in secure escrow. Payout releases instantly on QR dispatch scan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Mac Console IDE outputs -->
+        <div class="tracer-right-pane">
+          <div class="tracer-terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-tab">agritrade_sandbox_pipeline.log</div>
+            <div class="terminal-badge">LIVE TRACE</div>
+          </div>
+          
+          <div class="tracer-terminal-body">
+            <pre id="flow-terminal-text" class="terminal-code-block"><span class="code-comment">// agritrade-console$ init_sandbox_tracer.sh --verbose
+// Pipeline Tracer initialized. Waiting for test command...</span></pre>
+          </div>
+          
+          <div class="tracer-terminal-footer">
+            <div>SYNC STATUS: <span class="tele-val text-green" id="term-sync">IDLE</span></div>
+            <div>BUFFER CACHE: <span class="tele-val" id="term-cache">0 QUEUED</span></div>
+            <div>PING LATENCY: <span class="tele-val" id="term-ping">--</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: SYSTEM TRANSACTION RULES Blueprint ── -->
+    <section class="reveal" style="margin-bottom: var(--space-2xl);">
+      <h2 class="text-display text-green" style="font-size: var(--font-h2); margin-bottom: var(--space-md); text-align: center;">Security &amp; Transaction Rules</h2>
+      <p class="text-secondary" style="margin-bottom: var(--space-md); text-align: center; color: var(--text-on-dark-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
+        To prevent market exploitation and secure local payments, absolute data integrity is locked down by database boundaries:
+      </p>
+      
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-xl); padding: var(--space-lg); max-width: 900px; margin: 0 auto; box-shadow: var(--shadow-sm);">
+        <ul style="display: flex; flex-direction: column; gap: var(--space-md); font-size: var(--font-small); color: var(--text-on-dark-muted);">
+          <li>🔑 <strong>Secure OTP Verification</strong>: Direct user session authentication via Twilio OTP prevents credential spoofing on the B2B direct mandi market.</li>
+          <li>🛡️ <strong>P2P Escrow Ledger Locks</strong>: Firestore read/write structures require absolute UID equality. Farmers can only edit their uploads, and wholesalers can only write orders bound to their active buyer IDs.</li>
+          <li>📈 <strong>Rate Cap Guard</strong>: Bids cannot deviate by more than 40% from standard verified market values to block price exploitation in remote village districts.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" style="background: transparent; border-top: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="nav-logo">
+            <span class="nav-logo-text" style="color: white;">Agri<span class="text-gold">Trade</span></span>
+          </a>
+          <p class="footer-brand-text">AI-driven agricultural trade solutions empowering regional farming cooperatives with direct urban B2B markets.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <a href="./index.html#features" class="footer-link">Features</a>
+          <a href="./index.html#how-it-works" class="footer-link">How It Works</a>
+          <a href="./index.html#simulator" class="footer-link">Crop Prediction</a>
+          <a href="./assets/agri_trade_app.apk" class="footer-link" download>Download APK</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Technical Deep Dive</h4>
+          <a href="#" class="footer-link" style="color: var(--primary-glow);">API Flow Maps</a>
+          <a href="#database" class="footer-link">Firestore Schema</a>
+          <a href="#voice" class="footer-link">Gemini Voice Pipeline</a>
+          <a href="https://github.com/BAJI-761/AGRI_TRADE_APP_hackthon" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hackathon</h4>
+          <p class="footer-brand-text" style="margin-top: 0; font-size: 14px;">ByteHearts Ranovex 2026<br><strong>Category</strong>: Best Social Impact & Rural Innovation</p>
+          <a href="./about.html" class="footer-link" style="color: var(--accent-gold); font-weight: bold; margin-top: 8px;">About the Creators &rarr;</a>
+        </div>
+      </div>
+      <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.04);">
+        <div>&copy; 2026 AgriTrade. Built with 💚 for Indian Agriculture.</div>
+        <div>ByteHearts Developer Circle &bull; Ranovex 2026 Submission</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app_v75.js"></script>
+  <script src="./architecture.js?v=2.2"></script>
+</body>
+</html>

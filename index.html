@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>AgriTrade — AI-Powered Crop Intelligence & Direct Trading Platform</title>
+  <meta name="description" content="Empowering 150M+ Indian farmers with real-time AI crop prediction, multi-lingual voice search, direct-to-retailer trade markets, and micro-analytics. Build for ByteHearts Ranovex 2026.">
+  <meta name="keywords" content="agriculture, AI crop prediction, direct trading, rural fintech, smart farming, voice accessibility, Flutter agriculture, India farm tech">
+  <meta name="author" content="AgriTrade Dev Team">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="./style_v75.css">
+</head>
+<body>
+
+  <!-- ── Premium Page Loader ── -->
+  <div class="page-loader" id="page-loader">
+    <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" class="loader-logo">
+    <div class="loader-text">AGRITRADE</div>
+    <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: -8px; opacity: 0.8;">PRECISELY ORGANIC &middot; INTELLIGENTLY CONNECTED</div>
+  </div>
+
+  <!-- ── Simple Static Navigation ── -->
+  <nav class="simple-nav">
+    <a href="./index.html" class="simple-logo">
+      <img src="./assets/images/app_icon.png" alt="AgriTrade Logo" style="height:32px; width:32px; border-radius:8px;">
+      <span>Agri<span style="color:#d4af37">Trade</span></span>
+    </a>
+    <div class="simple-links">
+      <a href="#market-metrics">Market Sizing</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="./architecture.html">Architecture</a>
+      <a href="./features.html">Platform UI</a>
+      <a href="./about.html">Team</a>
+      <a href="./assets/agri_trade_app.apk" class="nav-cta" download id="nav-download-btn">
+        <span>Download APK</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── Section 1: Hero Canvas Sequence ── -->
+  <header class="hero" id="hero-section">
+    <div class="hero-canvas" id="canvas-container">
+      <canvas id="scroll-canvas"></canvas>
+      <img src="./assets/images/Terraced Paddies.jpeg" class="hero-fallback-img" alt="Terraced Rice Paddies Fallback">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <div class="overline animate-delay-1">VOICE-POWERED B2B AGRICULTURAL PLATFORM</div>
+      <h1 class="hero-title animate-delay-2">
+        Growing Futures,<br>
+        <span class="highlight">Connecting Harvests.</span>
+      </h1>
+      <p class="hero-subtitle animate-delay-3">
+        Eliminate middlemen margins. AgriTrade puts AI-powered soil diagnostics, crop recommendations, multilingual voice access, and transparent peer-to-peer markets directly into the hands of India's farming communities.
+      </p>
+      
+      <div class="hero-cta-row animate-delay-4">
+        <a href="./assets/agri_trade_app.apk" class="btn-primary" download id="hero-download-apk">
+          <span>Download App APK</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+        <a href="#simulator" class="btn-outline">
+          <span>Predict Soil Crop</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </a>
+      </div>
+
+      <!-- Quick stats indicators -->
+      <div class="hero-stats animate-delay-5">
+        <div>
+          <div class="hero-stat-value">₹0</div>
+          <div class="hero-stat-label">PLATFORM TRANSACTIONS FEE</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">2 &middot; EN/TEL</div>
+          <div class="hero-stat-label">MULTILINGUAL CHANNELS</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">95%</div>
+          <div class="hero-stat-label">AI PREDICTION CONFIDENCE</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live scrolling ticker strip underneath hero -->
+  <div class="marquee-strip section-dark">
+    <div class="marquee-track" id="live-scroller-track">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </div>
+
+  <!-- ── New Section: Farmers & Retailers News ── -->
+  <section class="news-crisis-section section-dark" id="news-crisis" style="background: url('./assets/farmer_struggle_bg.png') center/cover no-repeat; position: relative; padding: var(--space-2xl) 0; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: rgba(8, 22, 16, 0.85); z-index: 1;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header text-center reveal">
+        <div class="overline">THE GROUND REALITY</div>
+        <h2 class="section-title">Farmers and Retailers in Crisis</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto var(--space-xl);">Headlines across the nation highlight the widening gap between wholesale costs and the struggles at the farmgate.</p>
+      </div>
+
+      <!-- Slow side-rolling animation marquee -->
+      <div class="news-marquee-container">
+        <div class="news-marquee-track">
+          <!-- Primary Set -->
+          <img src="./assets/news_gen/news_gen_1.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_2.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_3.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_4.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_1.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_2.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_3.png" alt="News Article Screenshot" class="news-screenshot">
+          <!-- Duplicate Set for Seamless Looping -->
+          <img src="./assets/news_gen/news_gen_1.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_2.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_3.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_4.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_1.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_2.png" alt="News Article Screenshot" class="news-screenshot">
+          <img src="./assets/news_gen/news_gen_3.png" alt="News Article Screenshot" class="news-screenshot">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 2: "The Problem" Impact Section ── -->
+  <section class="impact-section section-dark" id="the-problem">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="overline">AGRICULTURAL CRISIS IN NUMBERS</div>
+        <h2 class="section-title">The Rural Disconnect</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto 0;">The traditional supply chain exploits hard-working farmers while introducing massive friction and food waste.</p>
+      </div>
+
+      <div class="impact-grid stagger-children" style="margin-bottom: var(--space-2xl);">
+        <div class="impact-card reveal">
+          <div class="impact-number" data-target="₹92,000 Cr">₹0</div>
+          <div class="impact-label">Post-harvest losses in India annually due to poor forecasting and logistics constraints.</div>
+          <div class="impact-divider"></div>
+        </div>
+        
+        <div class="impact-card reveal">
+          <div class="impact-number" data-target="86%">0%</div>
+          <div class="impact-label">Smallholder farmers have no direct visibility into metropolitan retailer buying rates.</div>
+          <div class="impact-divider"></div>
+        </div>
+        
+        <div class="impact-card reveal">
+          <div class="impact-number" data-target="30% - 40%">0%</div>
+          <div class="impact-label">Of consumer payments are consumed by local middle brokers, cutting thin farmer margins.</div>
+          <div class="impact-divider"></div>
+        </div>
+      </div>
+
+      <!-- Bottom-Up Market Capability Grid (Extracted from startup report) -->
+      <div id="market-metrics" style="padding-top: var(--space-xl); border-top: 1px solid rgba(255,255,255,0.08);">
+        <div class="section-header text-center reveal">
+          <div class="overline">BOTTOM-UP VENTURE MODEL</div>
+          <h2 class="section-title text-gold" style="font-size: var(--font-h2);">Agricultural Market Sizing & Economics</h2>
+          <p class="section-subtitle" style="margin: var(--space-sm) auto 0; color: var(--text-on-dark-muted);">Our deterministic venture model targets a highly defensive, capital-efficient niche utilizing massive rural margin disintermediation.</p>
+        </div>
+
+        <div class="market-metrics-grid stagger-children">
+          <!-- Card 1: TAM -->
+          <div class="market-metric-card reveal">
+            <div class="metric-badge">TAM</div>
+            <div class="metric-value">₹30 Lakh Cr</div>
+            <div class="metric-usd">~$360 Billion USD</div>
+            <p class="metric-desc"><strong>Total Addressable Market</strong>: The massive aggregate monetary value of India's annual agricultural food grain and produce trade.</p>
+          </div>
+
+          <!-- Card 2: SAM -->
+          <div class="market-metric-card reveal">
+            <div class="metric-badge">SAM</div>
+            <div class="metric-value">₹3 Lakh Cr</div>
+            <div class="metric-usd">~$36 Billion USD</div>
+            <p class="metric-desc"><strong>Serviceable Addressable Market</strong>: Targeting regional B2B transactions in pilot clusters with stable mobile phone connectivity (Telangana, AP, UP).</p>
+          </div>
+
+          <!-- Card 3: SOM -->
+          <div class="market-metric-card reveal">
+            <div class="metric-badge">SOM</div>
+            <div class="metric-value">₹1,500 Cr</div>
+            <div class="metric-usd">~$180 Million USD</div>
+            <p class="metric-desc"><strong>Serviceable Obtainable Market</strong>: Conservative 0.5% market share capture over a 3-5 year window via aggressive offline Village Anchor networks.</p>
+          </div>
+
+          <!-- Card 4: Economics -->
+          <div class="market-metric-card reveal highlight-gold">
+            <div class="metric-badge gold">ECONOMIC MOAT</div>
+            <div class="metric-value">40 : 1 Ratio</div>
+            <div class="metric-usd">Compounding LTV : CAC</div>
+            <p class="metric-desc">Customer Acquisition Cost (CAC) of just ₹50-100 via offline demos, yields a recurring Customer Lifetime Value (LTV) of ₹4,200 annually per user.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 3: "For Farmers" INTERACTIVE Showcase ── -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-overline">DESIGNED FOR DIGNITY</div>
+        <h2 class="section-title text-green">Empowering India's Farmers</h2>
+        <p class="section-subtitle">A highly optimized interface tailored for outdoor operations, low-bandwidth villages, and zero-barrier agricultural technology adoption. Click or hover on features to inspect mobile mockups.</p>
+      </div>
+
+      <div class="showcase-container reveal">
+        <!-- Left Side: Expandable Feature Triggers -->
+        <div class="showcase-menu" id="farmer-showcase-menu">
+          
+          <!-- Trigger 1 -->
+          <div class="showcase-card active" data-feature="farmer-diagnostics">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-green">🌱</div>
+              <h3 class="showcase-card-title">Smart Crop Diagnostic Engine</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Analyzes soil quality (Red, Black, Clay, Loamy, Silt, Sandy), regional water parameters, season (Kharif, Rabi), and available budget to calculate suitability index scores.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Under the Hood</strong>: Local rule-based offline diagnostics gracefully sync with high-fidelity online Google Gemini APIs.</li>
+                <li><strong>Factual Analytics</strong>: Calculates crop maturity timelines, expected yield weights, and local commodity market prices.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge">Dart SmartEngine</span>
+                <span class="showcase-card-badge">Gemini Telemetry</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 2 -->
+          <div class="showcase-card" data-feature="farmer-voice">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-gold">🎙️</div>
+              <h3 class="showcase-card-title">Multilingual Voice Commands</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">No typing required. Speech-to-text NLP pipeline allows illiterate and semi-literate farmers to request recommendations and post bids entirely by speaking naturally.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Intelligent Parser</strong>: Decodes unstructured regional audio strings (English/Telugu accents) into strict, typed JSON trade objects.</li>
+                <li><strong>Accessibility Index (AQ)</strong>: Features 150x150px touch buttons, clear sound wave animations, and immediate voice-back confirmations.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge">Speech-To-Text SDK</span>
+                <span class="showcase-card-badge">Vernacular NLU</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 3 -->
+          <div class="showcase-card" data-feature="farmer-trade">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-terra">🤝</div>
+              <h3 class="showcase-card-title">Peer-to-Peer Direct Selling</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Bypass localized commission mandis completely. Upload active crop stock details, establish direct bidding triggers, and contract directly with metropolitan wholesale buyers.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Broker Disintermediation</strong>: Flat 2% platform transaction rate vs 30-40% traditional middlebroker margins.</li>
+                <li><strong>Escrow Guarantee</strong>: Payment is held securely in digital vaults and only released to the farmer upon dual QR delivery checks.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge">Escrow API Integration</span>
+                <span class="showcase-card-badge">Direct Market</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 4 -->
+          <div class="showcase-card" data-feature="farmer-escrow">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-sun">🔒</div>
+              <h3 class="showcase-card-title">Secure Escrow Payments</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Negotiated B2B trade funds are locked in secure digital vault buffers upon purchase order approval, ensuring farmers receive 100% payout security before dispatching their harvest.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Payment Guarantee</strong>: Direct integrated UPI/Razorpay channels release escrow capital straight to local bank accounts upon final crop delivery validation.</li>
+                <li><strong>Dual-Signature Checkout</strong>: Rehearsed safety layers require dual QR matching to release escrow, protecting against disputes, payload deviations, or payment default.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge">Razorpay/UPI API</span>
+                <span class="showcase-card-badge">Instant Settlement</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Vertical Smartphone Hardware Mockup Bezel -->
+        <div class="showcase-visual">
+          <div class="device-mockup-portrait">
+            <div class="device-notch"></div>
+            <div class="device-screen-indicator">📱 PORTRAIT SCREEN EMULATOR</div>
+            <div class="device-screen">
+              <!-- Active screens cross-faded smoothly -->
+              <img src="./assets/screenshots/screen_15.jpg" class="device-screenshot active" id="farmer-screenshot-diagnostics" alt="Diagnostics Detail Screen">
+              <img src="./assets/screenshots/screen_11.jpg" class="device-screenshot" id="farmer-screenshot-voice" alt="Hands-free Voice Assistant Screen">
+              <img src="./assets/screenshots/screen_10.jpg" class="device-screenshot" id="farmer-screenshot-trade" alt="Crop Listing Upload Screen">
+              <img src="./assets/screenshots/screen_25.jpg" class="device-screenshot" id="farmer-screenshot-escrow" alt="Secure Escrow Payment Logs Screen">
+            </div>
+            <div class="device-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 4: "For Retailers" INTERACTIVE Showcase ── -->
+  <section class="features-section section-dark" id="retailer-features">
+    <div class="container">
+      <div class="section-header text-right reveal" style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; margin-left: auto;">
+        <div class="section-overline">TRANSPARENT PROCUREMENT</div>
+        <h2 class="section-title text-gold">Streamlining Urban Logistics</h2>
+        <p class="section-subtitle">Providing supermarkets, restaurants, and wholesalers with automated organic crop tracking, clear provenance, and direct contracts. Select a card to inspect tablet displays.</p>
+      </div>
+
+      <div class="showcase-container showcase-container-reversed reveal">
+        <!-- Left Side: Portrait Smartphone Hardware Bezel -->
+        <div class="showcase-visual">
+          <div class="device-mockup-portrait">
+            <div class="device-notch"></div>
+            <div class="device-screen-indicator">📱 PORTRAIT SCREEN EMULATOR</div>
+            <div class="device-screen">
+              <!-- Active screens cross-faded smoothly -->
+              <img src="./assets/screenshots/screen_21.jpg" class="device-screenshot active" id="retailer-screenshot-ledger" alt="Retailer Mandi Dashboard Screen">
+              <img src="./assets/screenshots/screen_18.jpg" class="device-screenshot" id="retailer-screenshot-bidding" alt="Active Auctions Bid Ledger Screen">
+              <img src="./assets/screenshots/screen_23.jpg" class="device-screenshot" id="retailer-screenshot-orders" alt="Wholesaler Order Stream Screen">
+              <img src="./assets/screenshots/screen_30.jpg" class="device-screenshot" id="retailer-screenshot-shipping" alt="Order Fulfillment Shipping Screen">
+            </div>
+            <div class="device-button"></div>
+          </div>
+        </div>
+
+        <!-- Right Side: Expandable Retailer Feature Triggers -->
+        <div class="showcase-menu" id="retailer-showcase-menu">
+          
+          <!-- Trigger 1 -->
+          <div class="showcase-card showcase-card-dark active" data-feature="retailer-ledger">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-gold">📊</div>
+              <h3 class="showcase-card-title text-gold">Wholesale Inventory Bid Ledger</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Retailers publish bulk grain demands, specify raw grade classifications, and receive immediate local farm bids. Direct catalogs with zero middleman markup.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Transparent Procurement</strong>: Eliminate unverified sourcing, accessing direct catalog feeds straight from active fields.</li>
+                <li><strong>Predictive Analytics</strong>: Uses historical crop volume data to forecast agricultural supply surges and lock in favorable prices.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge dark">B2B Dashboard</span>
+                <span class="showcase-card-badge dark">Supply Forecast</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 2 -->
+          <div class="showcase-card showcase-card-dark" data-feature="retailer-bidding">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-terra">⚡</div>
+              <h3 class="showcase-card-title text-gold">Real-Time Bidding desk</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Submit competitive digital bids directly to local farm cooperatives. Dynamic auctions match active buyers with verified grain payloads in real-time.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Digital Escrow Contracts</strong>: Standardized quality grading binds transaction records, preventing payment default.</li>
+                <li><strong>Audit Trails</strong>: Instantly access verified history logs of bid adjustments, transport parameters, and seller ratings.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge dark">Escrow Ledger</span>
+                <span class="showcase-card-badge dark">Verified Ratings</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 3 -->
+          <div class="showcase-card showcase-card-dark" data-feature="retailer-orders">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-green">🛡️</div>
+              <h3 class="showcase-card-title text-gold">Escrow-backed Order Streams</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Onboard farm lists with robust WebSocket synchronization. One-tap transaction confirmations bind payments dynamically, protecting margins.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>QR Verification</strong>: Two-party checkout release. Wholesalers scan the logistics driver's badge upon crop weight validation.</li>
+                <li><strong>Dispute Console</strong>: Instantly files discrepancies if cargo quality or weight fails to match digital manifests.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge dark">Reactive Streams</span>
+                <span class="showcase-card-badge dark">QR Signature Gate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger 4 -->
+          <div class="showcase-card showcase-card-dark" data-feature="retailer-shipping">
+            <div class="showcase-card-header">
+              <div class="bento-icon bento-icon-sun">🚛</div>
+              <h3 class="showcase-card-title text-gold">Integrated Fleet Dispatch</h3>
+            </div>
+            <div class="showcase-card-body">
+              <p class="showcase-card-desc">Track active shipments from pickup coordinates straight to your warehouse gate. Real-time document routing ensures smooth highway transit.</p>
+              <ul class="showcase-card-bullets">
+                <li><strong>Logistics Maps</strong>: Active integration provides logistics drivers with optimal routes, bypassing gridlocks.</li>
+                <li><strong>Signed Receipts</strong>: Access electronic bills of lading and digitally signed delivery receipts instantly on-screen.</li>
+              </ul>
+              <div class="showcase-card-badges">
+                <span class="showcase-card-badge dark">Transit Telemetry</span>
+                <span class="showcase-card-badge dark">Digital Receipting</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>  <!-- ── Section 5: "How It Works" Step-by-Step Interactive Journey Console ── -->
+  <section class="journey-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-overline">UNIFIED INTERACTIVE JOURNEY CONSOLE</div>
+        <h2 class="section-title text-green">Frictionless Farm Journeys</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto 0; max-width: 750px;">Explore the full logical flow of the AgriTrade Flutter application. Interact with the phases and steps below to inspect real-time mobile emulations.</p>
+      </div>
+
+      <!-- Phase Selector Ribbon -->
+      <div class="journey-phase-tabs reveal">
+        <button class="phase-tab active" data-phase="1">
+          <span class="phase-num">01</span>
+          <span class="phase-text">Account Onboarding & Role Setup</span>
+        </button>
+        <button class="phase-tab" data-phase="2">
+          <span class="phase-num">02</span>
+          <span class="phase-text">AI Crop Prediction & Analytics</span>
+        </button>
+        <button class="phase-tab" data-phase="3">
+          <span class="phase-num">03</span>
+          <span class="phase-text">Direct B2B Trade & Settlements</span>
+        </button>
+      </div>
+
+      <!-- Journey Console Wrapper -->
+      <div class="journey-console reveal">
+        
+        <!-- Left: Interactive Journey Step list -->
+        <div class="journey-sidebar" id="journey-showcase-menu">
+          
+          <!-- Phase 1 Steps -->
+          <div class="journey-steps-group active" data-phase-group="1">
+            <div class="journey-step-card active" data-step="1" data-screenshot="screen_01">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 01</span>
+                <h3 class="step-card-title">Splash App Entry</h3>
+              </div>
+              <p class="step-card-desc">The initial splash app entry compiling all modular Flutter assets and Lottie animations on load.</p>
+            </div>
+            <div class="journey-step-card" data-step="2" data-screenshot="screen_03">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 02</span>
+                <h3 class="step-card-title">Language Selection</h3>
+              </div>
+              <p class="step-card-desc">With one simple tap, the entire application layout, acoustic voice models, and interfaces toggle instantly between regional Telugu and English.</p>
+            </div>
+            <div class="journey-step-card" data-step="3" data-screenshot="screen_07">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 03</span>
+                <h3 class="step-card-title">Twilio OTP Sign-up</h3>
+              </div>
+              <p class="step-card-desc">Password-free credentials protect rural user databases. Secure, single-use OTP codes verify phone numbers within seconds.</p>
+            </div>
+            <div class="journey-step-card" data-step="4" data-screenshot="screen_05">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 04</span>
+                <h3 class="step-card-title">Persona Configuration</h3>
+              </div>
+              <p class="step-card-desc">Define account classification to isolate workflows: Farmers get crop diagnostic engines, and Retailers get bulk B2B inventory streams.</p>
+            </div>
+          </div>
+
+          <!-- Phase 2 Steps -->
+          <div class="journey-steps-group" data-phase-group="2">
+            <div class="journey-step-card" data-step="5" data-screenshot="screen_12">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 05</span>
+                <h3 class="step-card-title">Diagnostic Inputs</h3>
+              </div>
+              <p class="step-card-desc">Farmers enter localized soil classification parameters (Red, Black, Clay, Loamy) alongside regional water supply levels and current budget constraints.</p>
+            </div>
+            <div class="journey-step-card" data-step="6" data-screenshot="screen_13">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 06</span>
+                <h3 class="step-card-title">AI Suitability Matching</h3>
+              </div>
+              <p class="step-card-desc">Advanced algorithms weigh soil and water vectors to rank matching crop types with exact confidence percentages.</p>
+            </div>
+            <div class="journey-step-card" data-step="7" data-screenshot="screen_15">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 07</span>
+                <h3 class="step-card-title">Crop Suitability Details</h3>
+              </div>
+              <p class="step-card-desc">Generative AI reports analyze chemical soil parameters to display predicted yield weights, projected rates, and detailed crop care tips.</p>
+            </div>
+            <div class="journey-step-card" data-step="8" data-screenshot="screen_11">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 08</span>
+                <h3 class="step-card-title">Multilingual Voice Commands</h3>
+              </div>
+              <p class="step-card-desc">Farmers speak naturally in regional Telugu or English accents to execute bids, request soil advice, or explore buyers completely hands-free.</p>
+            </div>
+          </div>
+
+          <!-- Phase 3 Steps -->
+          <div class="journey-steps-group" data-phase-group="3">
+            <div class="journey-step-card" data-step="9" data-screenshot="screen_10">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 09</span>
+                <h3 class="step-card-title">Publish Crop Payloads</h3>
+              </div>
+              <p class="step-card-desc">Farmers instantly upload active harvest weight listings, adding visual proof and price expectations directly into the shared B2B mandi directory.</p>
+            </div>
+            <div class="journey-step-card" data-step="10" data-screenshot="screen_18">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 10</span>
+                <h3 class="step-card-title">Real-Time Bids Ledger</h3>
+              </div>
+              <p class="step-card-desc">Regional wholesalers, supermarkets, and hotels inspect harvest payloads and submit direct, competitive price bids on active listings.</p>
+            </div>
+            <div class="journey-step-card" data-step="11" data-screenshot="screen_25">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 11</span>
+                <h3 class="step-card-title">Escrow Payment Logs</h3>
+              </div>
+              <p class="step-card-desc">Negotiated trade funds are secured in Razorpay/UPI digital escrow vaults, protecting farmers from wholesale payment defaults.</p>
+            </div>
+            <div class="journey-step-card" data-step="12" data-screenshot="screen_28">
+              <div class="step-card-header">
+                <span class="step-card-number">Step 12</span>
+                <h3 class="step-card-title">Direct UPI Settlement</h3>
+              </div>
+              <p class="step-card-desc">Capital is released directly to the farmer's bank account upon matching dual-QR codes scanned at the logistics pickup gate.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Portrait Smartphone Bezel displaying active screenshots -->
+        <div class="journey-visual">
+          <div class="device-mockup-portrait">
+            <div class="device-notch"></div>
+            <div class="device-screen-indicator">📱 LIVE EMULATOR WORKFLOW</div>
+            <div class="device-screen" id="journey-emulator-screen">
+              <!-- Active screens cross-faded smoothly -->
+              <img src="./assets/screenshots/screen_01.jpg" class="device-screenshot active" data-journey-screen="screen_01" alt="Splash Entry Screen">
+              <img src="./assets/screenshots/screen_03.jpg" class="device-screenshot" data-journey-screen="screen_03" alt="Select Language Screen">
+              <img src="./assets/screenshots/screen_07.jpg" class="device-screenshot" data-journey-screen="screen_07" alt="Mobile Input OTP Screen">
+              <img src="./assets/screenshots/screen_05.jpg" class="device-screenshot" data-journey-screen="screen_05" alt="Persona Configuration Profile Screen">
+              <img src="./assets/screenshots/screen_12.jpg" class="device-screenshot" data-journey-screen="screen_12" alt="Soil Diagnostic Input Screen">
+              <img src="./assets/screenshots/screen_13.jpg" class="device-screenshot" data-journey-screen="screen_13" alt="AI Matching Recommendations Screen">
+              <img src="./assets/screenshots/screen_15.jpg" class="device-screenshot" data-journey-screen="screen_15" alt="AI Recommendation Suitability Screen">
+              <img src="./assets/screenshots/screen_11.jpg" class="device-screenshot" data-journey-screen="screen_11" alt="Voice Commands Input Screen">
+              <img src="./assets/screenshots/screen_10.jpg" class="device-screenshot" data-journey-screen="screen_10" alt="Upload Crop Harvest Screen">
+              <img src="./assets/screenshots/screen_18.jpg" class="device-screenshot" data-journey-screen="screen_18" alt="Auction Bidding Desk Screen">
+              <img src="./assets/screenshots/screen_25.jpg" class="device-screenshot" data-journey-screen="screen_25" alt="Escrow Payment Logs Screen">
+              <img src="./assets/screenshots/screen_28.jpg" class="device-screenshot" data-journey-screen="screen_28" alt="Smart Escrow Direct UPI Settlement Screen">
+            </div>
+            <div class="device-button"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ── Section 6: "Try It Live" Crop Simulator Section ── -->
+  <section class="simulator-section section-dark" id="simulator">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="overline">HACKATHON EXCLUSIVE TESTING</div>
+        <h2 class="section-title text-gold">AI Crop Prediction Simulator</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto 0;">Interact with our actual algorithm directly in the web browser. The logic calculates suitability scores exactly like the mobile app.</p>
+      </div>
+
+      <div class="simulator-wrapper reveal">
+        <form class="simulator-card" id="simulator-form">
+          <div class="simulator-grid">
+            <!-- Soil -->
+            <div class="sim-field">
+              <label class="sim-label" for="soil-type">Soil Classification</label>
+              <select class="sim-select" id="soil-type" required>
+                <option value="Loamy">Loamy (Balanced & Nutritious)</option>
+                <option value="Black">Black Soil (High Moisture Retention)</option>
+                <option value="Red">Red Soil (Iron-rich, Acidic)</option>
+                <option value="Clay">Clay (Dense, Retains Water)</option>
+                <option value="Sandy">Sandy (Well Drained, Dry)</option>
+                <option value="Silt">Silt (Fine Organic Silt)</option>
+              </select>
+            </div>
+
+            <!-- Season -->
+            <div class="sim-field">
+              <label class="sim-label" for="season">Active Farming Season</label>
+              <select class="sim-select" id="season" required>
+                <option value="Kharif">Kharif (Monsoon Planting)</option>
+                <option value="Rabi">Rabi (Winter Planting)</option>
+                <option value="Summer">Summer (Dry Season)</option>
+                <option value="Winter">Winter (Cooler Dry)</option>
+                <option value="Monsoon">Monsoon (Heavy Rains)</option>
+              </select>
+            </div>
+
+            <!-- Water -->
+            <div class="sim-field">
+              <label class="sim-label" for="water-avail">Water Availability</label>
+              <select class="sim-select" id="water-avail" required>
+                <option value="Medium">Medium Water Supply</option>
+                <option value="High">High Water Supply</option>
+                <option value="Low">Low Water (Drought prone)</option>
+              </select>
+            </div>
+
+            <!-- Irrigation -->
+            <div class="sim-field">
+              <label class="sim-label" for="irrigation-type">Irrigation Source</label>
+              <select class="sim-select" id="irrigation-type" required>
+                <option value="Drip">Drip Irrigation (Precise)</option>
+                <option value="Well">Well / Tube-Well</option>
+                <option value="Canal">River Canal</option>
+                <option value="Rain-fed">Rain-Fed (Natural precipitation)</option>
+                <option value="Sprinkler">Overhead Sprinklers</option>
+              </select>
+            </div>
+
+            <!-- Land Slider -->
+            <div class="sim-field" style="grid-column: 1 / -1; margin-top: var(--space-xs);">
+              <div style="display: flex; justify-content: space-between;">
+                <label class="sim-label" for="land-size">Farm Land Holding</label>
+                <span class="sim-label" id="land-size-val" style="color: var(--accent-gold);">5.0 Acres</span>
+              </div>
+              <div class="sim-range-wrapper">
+                <input type="range" class="sim-range" id="land-size" min="0.5" max="25" step="0.5" value="5.0">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="sim-submit-btn">Run Diagnostics & Predict Crops &rarr;</button>
+        </form>
+
+        <!-- Prediction outputs populated dynamically by app.js -->
+        <div class="prediction-results" id="sim-results">
+          <h3 class="text-display" style="font-size: 24px; color: white; margin-bottom: 24px; text-align: center;">Recommended Crops</h3>
+          <div id="sim-cards-wrapper">
+            <!-- Prediction Cards render here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 7: Technical Architecture Showcase ── -->
+  <section class="arch-section" id="architecture-teaser">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-overline">TECHNICAL ARCHITECTURE</div>
+        <h2 class="section-title text-green">Engineered for Resilience</h2>
+        <p class="section-subtitle" style="margin: var(--space-sm) auto 0; max-width: 750px;">AgriTrade is built on a highly resilient, serverless-first, offline-ready architecture. Click on the core layers to inspect the actual backend source code, database policies, and real-time execution pipelines.</p>
+      </div>
+
+      <!-- Tech Sandbox Console -->
+      <div class="arch-sandbox reveal">
+        
+        <!-- Left: Interactive Topology Circuit Map -->
+        <div class="arch-topology-pane">
+          <div class="arch-topology-title">🖥️ CORE STACK TOPOLOGY</div>
+          
+          <div class="topology-nodes">
+            <!-- SVG Circuit Board Connecting Lines -->
+            <svg class="topology-circuit-bg" viewBox="0 0 400 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Circuit paths with dash-array animation -->
+              <path d="M200 90 L200 170" stroke="url(#emerald-gradient)" stroke-width="2.5" stroke-dasharray="8 6" class="circuit-path-anim"></path>
+              <path d="M200 200 L200 280" stroke="url(#emerald-gradient)" stroke-width="2.5" stroke-dasharray="8 6" class="circuit-path-anim"></path>
+              <path d="M200 310 L200 390" stroke="url(#gold-gradient)" stroke-width="2.5" stroke-dasharray="8 6" class="circuit-path-anim"></path>
+              
+              <!-- Definitions for linear gradients -->
+              <defs>
+                <linearGradient id="emerald-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"></stop>
+                  <stop offset="100%" stop-color="#34D399" stop-opacity="0.8"></stop>
+                </linearGradient>
+                <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#34D399" stop-opacity="0.8"></stop>
+                  <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.8"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <!-- Node 1: Client Edge -->
+            <div class="topology-node active" data-tech="client">
+              <div class="node-ring"></div>
+              <div class="node-icon">📱</div>
+              <div class="node-details">
+                <span class="node-tag">LAYER 01 // EDGE CLIENT</span>
+                <h4 class="node-name">Flutter &amp; SQLite Caching</h4>
+              </div>
+            </div>
+
+            <!-- Node 2: Secure Gateway -->
+            <div class="topology-node" data-tech="gateway">
+              <div class="node-ring"></div>
+              <div class="node-icon">🔒</div>
+              <div class="node-details">
+                <span class="node-tag">LAYER 02 // SECURE GATEWAY</span>
+                <h4 class="node-name">Twilio OTP &amp; FireAuth</h4>
+              </div>
+            </div>
+
+            <!-- Node 3: Intelligence Hub -->
+            <div class="topology-node" data-tech="intelligence">
+              <div class="node-ring"></div>
+              <div class="node-icon">🤖</div>
+              <div class="node-details">
+                <span class="node-tag">LAYER 03 // INTELLIGENCE HUB</span>
+                <h4 class="node-name">Gemini Voice NLU Core</h4>
+              </div>
+            </div>
+
+            <!-- Node 4: Decentralized Storage -->
+            <div class="topology-node" data-tech="storage">
+              <div class="node-ring"></div>
+              <div class="node-icon">📊</div>
+              <div class="node-details">
+                <span class="node-tag">LAYER 04 // DATA SYNC</span>
+                <h4 class="node-name">Cloud Firestore Database</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Professional Code & Telemetry Terminal Console -->
+        <div class="arch-terminal-pane">
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title" id="terminal-pane-title">agritrade_ide_console.dart</div>
+            <div class="terminal-status">
+              <span class="status-indicator-pulse"></span>
+              <span class="status-text">SYSTEM: ONLINE</span>
+            </div>
+          </div>
+
+          <!-- Code View Area -->
+          <div class="terminal-body">
+            <div class="terminal-pre-wrapper">
+              <pre class="terminal-code-block" id="terminal-code">
+<span class="code-comment">// Loading edge client code...</span>
+              </pre>
+            </div>
+          </div>
+
+          <!-- Live System Performance Telemetry Wave -->
+          <div class="terminal-telemetry">
+            <div class="telemetry-item">
+              <span class="tele-label">SYNC STAT:</span>
+              <span class="tele-value text-green" id="tele-sync">ONLINE // CACHED</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="tele-label">LATENCY:</span>
+              <span class="tele-value text-gold" id="tele-ping">120ms (LOCAL)</span>
+            </div>
+            <div class="telemetry-item" style="grid-column: span 2;">
+              <span class="tele-label">SECURITY:</span>
+              <span class="tele-value" id="tele-encrypt">AES-256-GCM / SHA-256</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-xl);" class="reveal">
+        <a href="./architecture.html" class="btn-primary" style="background: var(--primary); color: white; box-shadow: var(--shadow-md);">
+          <span>Explore Full Technical Deep-Dive &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 8: Download APK & CTA Section ── -->
+  <section class="download-section section-gradient" id="download">
+    <div class="container">
+      <h2 class="download-title reveal">Deploy AgriTrade on Your Phone</h2>
+      <p class="download-subtitle reveal">The working Flutter build is fully compiled and ready. Scan the source or download directly to test live workflows.</p>
+      
+      <div class="download-cta-row reveal">
+        <a href="./assets/agri_trade_app.apk" class="btn-primary" download style="background: var(--accent-gold); color: var(--primary-deep); box-shadow: var(--shadow-gold);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download App APK (60.8 MB)</span>
+        </a>
+        <a href="https://github.com/BAJI-761/AGRI_TRADE_APP_hackthon" class="btn-outline" target="_blank" rel="noopener noreferrer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 6px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span>Explore GitHub Repository &rarr;</span>
+        </a>
+      </div>
+
+      <div class="download-badge reveal">
+        <span>🤖 APK &bull; Version 1.0.0 &bull; Android 6.0+ &bull; Native Flutter Build</span>
+      </div>
+
+      <!-- App Mockup Image Frame -->
+      <div class="phone-mockup reveal">
+        <img src="./assets/screenshots/screen_01.jpg" alt="AgriTrade Screen View in Phone Frame">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 9: Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="nav-logo">
+            <span class="nav-logo-text" style="color: white;">Agri<span class="text-gold">Trade</span></span>
+          </a>
+          <p class="footer-brand-text">AI-driven agricultural trade solutions empowering regional farming cooperatives with direct urban B2B markets.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <a href="#features" class="footer-link">Features</a>
+          <a href="#how-it-works" class="footer-link">How It Works</a>
+          <a href="#simulator" class="footer-link">Crop Prediction</a>
+          <a href="./assets/agri_trade_app.apk" class="footer-link" download>Download APK</a>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Technical Deep Dive</h4>
+          <a href="./architecture.html" class="footer-link">API Flow Maps</a>
+          <a href="./architecture.html#database" class="footer-link">Firestore Schema</a>
+          <a href="./architecture.html#voice" class="footer-link">Gemini Voice Pipeline</a>
+          <a href="https://github.com/BAJI-761/AGRI_TRADE_APP_hackthon" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Hackathon</h4>
+          <p class="footer-brand-text" style="margin-top: 0; font-size: 14px;">ByteHearts Ranovex 2026<br><strong>Category</strong>: Best Social Impact & Rural Innovation</p>
+          <a href="./about.html" class="footer-link" style="color: var(--accent-gold); font-weight: bold; margin-top: 8px;">About the Creators &rarr;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AgriTrade. Built with 💚 for Indian Agriculture.</div>
+        <div>ByteHearts Developer Circle &bull; Ranovex 2026 Submission</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scroll-engine_v5.js"></script>
+  <script src="./app_v75.js"></script>
+  <script>
+    // Initialize the canvas sequence engine
+    document.addEventListener("DOMContentLoaded", () => {
+      new ScrollCanvasEngine("scroll-canvas", "canvas-container");
+    });
+  </script>
+</body>
+</html>
